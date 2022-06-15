@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>[[${pageTitle}]]</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<style>
+    body {
+        font-family: Gill Sans;
+        background-color: gray;
+    }
+    .square-box {
+        max-width: 600px;
+        min-height: 300px;
+    }
+    .small-box {
+        max-width: 400px;
+        min-height: 200px;
+    }
+</style>
+<body>
+<div class="container small-box d-flex justify-content-center align-items-end">
+    <div class="text-center"><h2>[[${pageTitle}]]</h2></div>
+</div>
+<div class="container square-box d-flex justify-content-center align-items-center">
+    <form th:action="@{/users/save}" th:object="${user}" method="post"
+    style="max-width: 500px; margin: 0 auto">
+        <input type="hidden" th:field="*{id}">
+        <table border="0" cellpadding="10">
+            <tr class="center">
+                <td>Name:</td>
+                <td><input type="text" th:field="*{name}" required/></td>
+            </tr>
+            <tr class="center">
+                <td>Account:</td>
+                <td><input type="email" th:field="*{account}" required/></td>
+            </tr>
+            <tr class="center">
+                <td>Password:</td>
+                <td><input type="password" th:field="*{password}" required minlength="8"/></td>
+            </tr>
+            <tr class="center">
+                <td>Role:</td>
+                <td><input type="text" th:field="*{role}" required/></td>
+            </tr>
+            <tr class="align-items-center">
+                <button type="submit" class="btn btn-success btn-lg m-3">Save</button>
+                <button type="button" class="btn btn-danger btn-lg" onClick="cancelForm()">Cancel</button>
+            </tr>
+        </table>
+    </form>
+</div>
+<script type="text/javascript">
+    function cancelForm() {
+        window.location = "[[@{/users}]]";
+    }
+</script>
+</body>
+</html>
