@@ -22,7 +22,7 @@ public class UserRepositoryTests {
 //        User user = new User();
 //        user.setId(null);
 //        user.setName("Harry Duong");
-//        user.setAccount("harry.duong@mail.utoronto.ca");
+//        user.setAccount("thisisanemail@gmail.com");
 //        user.setPassword("Harry@2002");
 //        user.setRole("Student");
 //
@@ -37,7 +37,7 @@ public class UserRepositoryTests {
 //        User user = new User();
 //        user.setId(null);
 //        user.setName("Duong Duc Hieu");
-//        user.setAccount("hieudd10@fsoft.com.vn");
+//        user.setAccount("thisisanemail@gmail.com");
 //        user.setPassword("Harry@300102");
 //        user.setRole("Intern");
 //
