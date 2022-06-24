@@ -23,7 +23,7 @@ public class UserRepositoryTests {
 //        user.setId(null);
 //        user.setName("Harry Duong");
 //        user.setAccount("thisisanemail@gmail.com");
-//        user.setPassword("Harry@2002");
+//        user.setPassword("password");
 //        user.setRole("Student");
 //
 //        User savedUser = repo.save(user);
@@ -38,7 +38,7 @@ public class UserRepositoryTests {
 //        user.setId(null);
 //        user.setName("Duong Duc Hieu");
 //        user.setAccount("thisisanemail@gmail.com");
-//        user.setPassword("Harry@300102");
+//        user.setPassword("password");
 //        user.setRole("Intern");
 //
 //        User savedUser = repo.save(user);
